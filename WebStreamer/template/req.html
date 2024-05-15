@@ -40,7 +40,7 @@
     <div class="container">
         <tag src="%s" class="player"></tag>
 
-        <div onclick="vlc_player('%s')" class="btn btn-primary">VLC Mobile</div>
+        <div onclick="vlc_player()" class="btn btn-primary">VLC Mobile</div>
     </div>
     
     <footer>
@@ -81,7 +81,12 @@
         toogle.onclick = () => {
             body.classList.toggle('dark')
             footer.classList.toggle('dark')
+        };
+        function vlc_player() {
+            const `vlc://${"%s"}`;
+            window.location.href = openVlc;
         }
+        
     </script>
 </body>
 </html>
