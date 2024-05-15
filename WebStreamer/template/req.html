@@ -5,7 +5,7 @@
     <meta property="og:image" content="https://www.flaticon.com/premium-icon/icons/svg/2626/2626281.svg" itemprop="thumbnailUrl">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>%s</title>
+    <title>Video Player</title>
     <link rel="stylesheet" type='text/css' href="https://drive.google.com/uc?export=view&id=1pVLG4gZy7jdow3sO-wFS06aP_A9QX0O6">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
@@ -14,12 +14,11 @@
 <body>
     <header>
         <div class="toogle"></div>
-        <div id="file-name" class="cyber">%s</div>
+        <div id="file-name" class="cyber">Video Player</div>
     </header>
     <div class="container">
-        <video controls crossorigin playsinline data-poster="/path/to/poster.jpg">
-            <source src="%s" type="video/mp4" size="720">
-            <source src="%s" type="video/webm" size="1080">
+        <video controls crossorigin playsinline data-poster="/path/to/poster.jpg" class="player">
+            <source src="%s" type="video/mp4">
             <!-- Caption files -->
             <track kind="captions" label="English" srclang="en" src="/path/to/captions.vtt" default>
             <!-- Fallback for browsers that don't support the <video> element -->
@@ -40,7 +39,7 @@
     <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const player = new Plyr('#player', {
+            const player = new Plyr('.player', {
                 captions: { active: true, update: true, language: 'en' },
                 controls: [
                     'play-large',
@@ -59,21 +58,8 @@
                     'airplay',
                     'download',
                     'fullscreen'
-                ],
-                settings: ['captions', 'quality', 'speed', 'loop'],
-                quality: {
-                    default: 720,
-                    options: [720, 1080],
-                    forced: true,
-                    onChange: (newQuality) => updateQuality(newQuality),
-                },
-                loop: { active: false },
+                ]
             });
-
-            function updateQuality(newQuality) {
-                window.player.media.querySelector('source[size="' + player.quality + '"]').disabled = true;
-                window.player.media.querySelector('source[size="' + newQuality + '"]').disabled = false;
-            }
         });
 
         const body = document.querySelector('body');
