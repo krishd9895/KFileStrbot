@@ -17,15 +17,10 @@
         <div id="file-name" class="cyber">Video Player</div>
     </header>
     <div class="container">
-        <video controls crossorigin playsinline data-poster="/path/to/poster.jpg" class="player">
-            <source src="%s" type="video/mp4">
-            <!-- Caption files -->
-            <track kind="captions" label="English" srclang="en" src="/path/to/captions.vtt" default>
-            <!-- Fallback for browsers that don't support the <video> element -->
-            <div>
-                <a href="%s" download>Download</a>
-            </div>
-        </video>
+        <!-- Placeholder for video source -->
+        <div>
+            <a href="%s" download>Download</a>
+        </div>
         <div onclick="vlc_player('%s')" class="btn btn-primary">VLC Mobile</div>
     </div>
     <footer>
