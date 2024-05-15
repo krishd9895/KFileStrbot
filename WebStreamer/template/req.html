@@ -10,23 +10,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
-    <style>
-        .btn-primary {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            text-align: center;
-            text-decoration: none;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
 </head>
 
 <body>
@@ -39,8 +24,6 @@
 
     <div class="container">
         <tag src="%s" class="player"></tag>
-
-        <div onclick="vlc_player()" class="btn btn-primary">VLC Mobile</div>
     </div>
     
     <footer>
@@ -52,8 +35,9 @@
         </span>
     </footer>
     
+    
     <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
-    <script>
+	<script>
         const controls = [
               'play-large',
               'rewind',
@@ -81,12 +65,7 @@
         toogle.onclick = () => {
             body.classList.toggle('dark')
             footer.classList.toggle('dark')
-        };
-        function vlc_player() {
-             const openVlc = `vlc://${"%s"}`;
-             window.location.href = openVlc;
         }
-        
     </script>
 </body>
 </html>
