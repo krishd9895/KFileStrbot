@@ -11,9 +11,9 @@
         "modular",
         "media"
       ],
-    "repository": "https://github.com/SpringsFern/FileStreamBot",
+    "repository": "https://github.com/krishd9895/KFileStrbot",
     "success_url": "/",
-    "website": "https://github.com/SpringsFern/FileStreamBot",
+    "website": "https://github.com/krishd9895/KFileStrbot",
     "env": {
         "ENV": {
             "description": "Set this to True if you don't want to crash the bot",
