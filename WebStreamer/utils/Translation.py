@@ -23,7 +23,7 @@ class Language:
 <i>- Sᴇɴᴅ ᴍᴇ ᴀɴʏ ꜰɪʟᴇ (ᴏʀ) ᴍᴇᴅɪᴀ ꜰʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ.</i>
 <i>- I ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴇxᴛᴇʀɴᴀʟ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ !.</i>
 <i>- ᴅᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ Wɪᴛʜ Fᴀsᴛᴇsᴛ Sᴘᴇᴇᴅ</i>
-<i>Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ (ᴏʀ) ʀᴇᴘᴏʀᴛ ʙᴜɢꜱ</i> <b>: <a href='https://t.me/{}'>[ ᴄʟɪᴄᴋ ʜᴇʀᴇ ]</a></b>"""
+<i>Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ"""
 
         ABOUT_TEXT: str = """
 <b>⚜ Mʏ ɴᴀᴍᴇ : Public Link Generator</b>\n
@@ -37,7 +37,7 @@ class Language:
 <b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>\n
 <b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>\n
 <b>🖥WATCH :</b> <i>{}</i>\n
-<b>Link Generated Using<b> <a href='https://t.me/{}'>{}</a>"""
+"""
 
         BAN_TEXT: str = "__Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ.__\n\n**[Cᴏɴᴛᴀᴄᴛ Dᴇᴠᴇʟᴏᴘᴇʀ](tg://user?id={}) Tʜᴇʏ Wɪʟʟ Hᴇʟᴘ Yᴏᴜ**"
 
@@ -92,8 +92,8 @@ class BUTTON(object):
         InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
         InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
-        ],
-        [InlineKeyboardButton("📢 Bot Channel", url=f'https://t.me/{Var.UPDATES_CHANNEL}')]
+        ]
+        
         ]
     )
     HELP_BUTTONS = InlineKeyboardMarkup(
@@ -101,8 +101,8 @@ class BUTTON(object):
         InlineKeyboardButton('Hᴏᴍᴇ', callback_data='home'),
         InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close'),
-        ],
-        [InlineKeyboardButton("📢 Bot Channel", url=f'https://t.me/{Var.UPDATES_CHANNEL}')]
+        ]
+        
         ]
     )
     ABOUT_BUTTONS = InlineKeyboardMarkup(
@@ -110,7 +110,7 @@ class BUTTON(object):
         InlineKeyboardButton('Hᴏᴍᴇ', callback_data='home'),
         InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
         InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close'),
-        ],
-        [InlineKeyboardButton("📢 Bot Channel", url=f'https://t.me/{Var.UPDATES_CHANNEL}')]
+        ]
+        
         ]
     )
